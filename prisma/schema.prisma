@@ -1,0 +1,41 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id            Int             @id @default(autoincrement())
+  name          String
+  cpf           String          @unique
+  birth         DateTime
+  consultations Consultations[]
+}
+
+model Doctor {
+  id                         Int             @id @default(autoincrement())
+  name                       String
+  crm                        String          @unique
+  specialty                  String
+  workStartTime              String          @default("09:00")
+  workEndTime                String          @default("17:00")
+  defaultAppointmentDuration Int             @default(60)
+  consultations              Consultations[]
+}
+
+model Consultations {
+  id              Int      @id @default(autoincrement())
+  client          Client   @relation(fields: [clientId], references: [id])
+  clientId        Int
+  doctor          Doctor   @relation(fields: [doctorId], references: [id])
+  doctorId        Int
+  date            DateTime
+  time            String // "HH:mm"
+  durationMinutes Int
+
+  @@unique([doctorId, date, time])
+}
