@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/shared/http/server.ts"
   },
   "dependencies": {
-    "@prisma/client": "^6.8.2",
+    "@prisma/client": "6.8.2",
     "celebrate": "^15.0.3",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
@@ -15,7 +15,7 @@
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
     "luxon": "^3.6.1",
-    "prisma": "^5.13.0",
+    "prisma": "6.8.2",
     "reflect-metadata": "^0.2.2",
     "tsyringe": "^4.10.0",
     "zod": "^3.23.8"

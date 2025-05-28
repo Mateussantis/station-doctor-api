@@ -131,7 +131,7 @@ Tecnologias utilizadas no desenvolvimento desta API:
 
 ### Requisitos
 
-Certifique-se de ter o [Node.js](https://nodejs.org/), o [Docker](https://www.docker.com/) e o [Yarn](https://yarnpkg.com/) instalados em sua máquina para executar este projeto de forma eficiente.
+Certifique-se de ter o [Docker](https://www.docker.com/) em sua máquina para executar este projeto de forma eficiente.
 
 ### Execução
 
