@@ -1,0 +1,28 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+logs
+
+# Environment files
+.env
+.env.*
+
+# Prisma migrations and generated folders (optional, depending on your workflow)
+prisma/dev.db
+prisma/migrations/
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode
+.idea
